@@ -10,14 +10,12 @@ pygame.display.set_caption("A* Pathfinder")
 #Color variables for colors used
 RED = (255, 0, 0)
 GREEN = (0, 255, 0)
-BLUE = (0, 255, 0)
-YELLOW = (255, 255, 0)
+BLUE = (0, 0, 255)
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 PURPLE = (128, 0, 128)
 ORANGE = (255, 165, 0)
 GRAY = (128, 128, 128)
-TURQUOISE = (64, 224, 208)
 
 #Node class to store each node of the grid
 class Node:
@@ -49,7 +47,7 @@ class Node:
         return self.color == ORANGE
 
     def is_end(self):
-        return self.color == TURQUOISE
+        return self.color == BLUE
 
     def reset(self):
         self.color = WHITE
@@ -68,7 +66,7 @@ class Node:
         self.color = ORANGE
 
     def make_end(self):
-        self.color = TURQUOISE
+        self.color = BLUE
 
     def make_path(self):
         self.color = PURPLE
